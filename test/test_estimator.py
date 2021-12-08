@@ -53,7 +53,7 @@ def test_kriging(data):
     X8 = X[8, :].reshape(1, dim)
 
     assert estimator.predict(X8) == pytest.approx(110, abs=0.01)
-    assert estimator.score(X, y) == 1
+    assert estimator.score(X, y) == pytest.approx(1, abs=1e-10)
 
 
 def test_tensor(data):
