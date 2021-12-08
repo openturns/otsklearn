@@ -1,5 +1,5 @@
-.. image:: https://travis-ci.org/openturns/otsklearn.svg?branch=master
-    :target: https://travis-ci.org/openturns/otsklearn
+.. image:: https://github.com/openturns/otsklearn/actions/workflows/build.yml/badge.svg?branch=master
+    :target: https://github.com/openturns/otsklearn/actions/workflows/build.yml
 
 otsklearn
 =========
