@@ -43,7 +43,7 @@ setup(
     packages=find_packages(),
 
     # Descriptions
-    description="Expose OpenTURNS metamodels with SciKit-Learn API",
+    description="Expose OpenTURNS surrogate models with SciKit-Learn API",
     long_description=long_description,
 
     # List of dependancies
