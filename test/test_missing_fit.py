@@ -18,11 +18,6 @@ def test_missing_fit_kriging():
         algo = otsklearn.Kriging()
         algo.predict([1])
 
-def test_missing_fit_tensor():
-    with pytest.raises(NotFittedError):
-        algo = otsklearn.TensorApproximation()
-        algo.predict([1])
-
 def test_missing_fit_lm():
     with pytest.raises(NotFittedError):
         algo = otsklearn.LinearModel()

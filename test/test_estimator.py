@@ -28,7 +28,7 @@ def test_chaos(data):
     estimator.fit(X, y)
     X8 = X[8, :].reshape(1, dim)
 
-    assert np.array(estimator.predict(X8)) == pytest.approx(121.4, abs=0.1)
+    assert np.array(estimator.predict(X8)) == pytest.approx(121.58, abs=0.1)
     assert estimator.score(X, y) == pytest.approx(0.79, abs=0.1)
 
     npt.assert_almost_equal(estimator.feature_importances_,
@@ -56,19 +56,6 @@ def test_kriging(data):
     assert estimator.score(X, y) == pytest.approx(1, abs=1e-10)
 
 
-def test_tensor(data):
-    X, y, dim, distribution = data
-
-    estimator = otsklearn.TensorApproximation(2, 5, distribution=distribution)
-    estimator.fit(X, y)
-    X8 = X[8, :]
-
-    assert estimator.predict(X8) == pytest.approx(145.16, abs=0.1)
-    assert estimator.score(X, y) == pytest.approx(0.59, abs=0.1)
-
-
-@pytest.mark.skipif(LooseVersion(ot.__version__) < '1.13',
-                    reason="Requires openturns 1.13 or higher")
 def test_linear(data):
     X, y, dim, distribution = data
 
